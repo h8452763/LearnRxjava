@@ -114,7 +114,7 @@ public class CreatingObservableActivity extends BaseActivity{
                 });
                 break;
             case "defer":
-                showApiDesc("直到有观察者订阅时才创建Observable，并且为每个观察者创建一个新的Observable"+
+                /*showApiDesc("直到有观察者订阅时才创建Observable，并且为每个观察者创建一个新的Observable"+
                 "just操作符是在创建Observable就进行了赋值操作，而defer是在订阅者订阅时才创建Observable，此时才进行真正的赋值操作");
                 Observable justObservable=Observable.just(System.currentTimeMillis());
                 final Observable deferObservable=Observable.defer(new Func0<Observable>() {
@@ -134,7 +134,7 @@ public class CreatingObservableActivity extends BaseActivity{
                     public void call(Object o) {
                         log("---->"+o);
                     }
-                });
+                });*/
                 break;
             case "range":
                 showApiDesc("创建一个发射特定整数序列的Observable"+

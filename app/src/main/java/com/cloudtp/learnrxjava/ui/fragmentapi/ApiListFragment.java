@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -74,6 +75,7 @@ public class ApiListFragment extends BaseLazyFragment implements BaseView {
             case COMBINING:
                 textView.setText("combining");
                 apiAdapter=new ApiAdapter(getActivity(),apiList);
+                Log.w("ceshi","");
                 break;
             default:
                 ;
@@ -82,7 +84,6 @@ public class ApiListFragment extends BaseLazyFragment implements BaseView {
         apiAdapter.setOnItemClickLitener(new ApiAdapter.OnItemClickLitener() {
             @Override
             public void onItemClick(View view, int position) {
-
                 //可以用工厂模式实现 根据名字的不同 去打开不同的activity
                 switchActivity(apiList.get(position).toString());
 
@@ -117,5 +118,6 @@ public class ApiListFragment extends BaseLazyFragment implements BaseView {
     @Override
     public void initializeViews(ArrayList<String> names) {
         apiList=names;
+
     }
 }

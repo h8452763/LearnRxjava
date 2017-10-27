@@ -42,6 +42,8 @@ public class MainFragment extends BaseLazyFragment implements FragmentView {
         presenter.initialized();
     }
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +95,7 @@ public class MainFragment extends BaseLazyFragment implements FragmentView {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             mActivity.invalidateOptionsMenu();
+
         }
     }
 
